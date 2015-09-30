@@ -1,0 +1,68 @@
+/* CSS reset settings here */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 10px 30px;
+	background: url("../img/background.png");
+	font-family: sans-serif;
+}
+
+p, ul, ol, dl, dd, img, blockquote {
+	margin-bottom: 10px;
+}
+
+h1, h2 {
+	color: green;
+	text-decoration: underline;
+}
+
+strong {
+	margin-right: 92%;
+}
+
+ol, p, blockquote, dl {
+	margin-left: 30px;
+}
+
+ul li {
+	list-style-type: square;
+	margin-left: 30px;
+}
+
+table {
+	margin: 10px;
+	border-collapse: collapse;
+	background-color: gray;
+}
+
+tr, td, th {
+	padding: 10px;
+	font-size: 15px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+th:first-child,
+td:first-child {
+	padding-left: 10px; 
+}
+
+th:last-child,  
+td:last-child {
+	padding-right: 10px; 
+}
+
+a {
+	margin: 10px 23px;
+}
+
+a:link,
+a:visited, 
+a:hover, 
+a:active {
+	color: blue;
+}
+

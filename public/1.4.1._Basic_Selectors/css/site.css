@@ -1,0 +1,22 @@
+/*CSS reset settings here*/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+a:link {
+	color: salmon;
+}
+
+a:visited {
+	color: papayawhip;
+}
+
+a:hover {
+	color: blue;
+}
+
+a:active {
+	color: pink;
+}

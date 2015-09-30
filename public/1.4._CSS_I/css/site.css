@@ -1,0 +1,11 @@
+/*CSS reset settings here*/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.fancy-header {
+    color: #6495ED;
+    text-decoration: underline;
+}

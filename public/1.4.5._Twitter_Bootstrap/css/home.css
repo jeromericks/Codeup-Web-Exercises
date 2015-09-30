@@ -1,0 +1,10 @@
+/* CSS reset settings here */
+/** {
+	margin: 0px;
+	padding: 0px;
+}*/
+
+body{
+	padding-top: 85px;
+	background-image: url("/1.4.5._Twitter_Bootstrap/crossword.png");
+}
