@@ -46,10 +46,10 @@ a{
 
 .btn-outline {
     margin-top: 45px;
-    border: solid 2px #ffffff;
+    border: solid 2px gray;
     font-size: 20px;
-    color: #fff;
-    background: #808080;
+    color: gray;
+    /*background: #808080;*/
     margin-left: 10px;
 }
 
@@ -59,14 +59,14 @@ a{
 .btn-outline.active {
     border: solid 2px #0099FF;
 	color: #3399FF;
-    background: #0000CC;
+    /*background: #0000CC;*/
 }
 
 .btn-social {
     display: inline-block;
     width: 50px;
     height: 50px;
-    border: 2px solid black;
+    border: 2px solid gray;
     border-radius: 100%;
     text-align: center;
     font-size: 20px;
