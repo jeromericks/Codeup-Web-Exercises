@@ -21,7 +21,7 @@ else if(color == 'green'){
 	console.log("Green is the color of an apple.");
 }
 else if(color == 'blue'){
-	document.write("<p class='blue'>Blue is the color of the sky.</p>")
+	document.write("<p class='blue'>Blue is the color of the sky.</p>");
 	console.log("Blue is the color of the sky.");
 }
 else{
@@ -30,4 +30,4 @@ else{
 }
 
 var message = (color == favorite) ? document.write("<p>You guessed my favorite color!</p> :)") : document.write("<p>You did not guess my favorite color.</p> :(");
-var message2 = (color == favorite) ? console.log("You guessed my favorite color! :)") : console.log("You did not guess my favorite color. :(");
+var message2 = (color == favorite) ? console.log("You guessed my favorite color! \n\n:)") : console.log("You did not guess my favorite color. \n\n:(");
