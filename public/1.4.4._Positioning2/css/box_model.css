@@ -1,0 +1,76 @@
+/* CSS reset settings here */
+/** {
+	margin: 0px;
+	padding: 0px;
+}*/
+
+body {
+	width: 447px;
+}
+
+a {
+	color: purple;
+}
+
+div {
+	width: 72px;
+	height: 72px;
+	border: 1px solid black;
+	padding-top: 10px;
+	padding-left: 10px;
+	margin-top: 50px;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.redBox a, 
+.orangeBox a, 
+.yellowBox a, 
+.greenBox a, 
+.blueBox a, 
+.purpleBox a {
+	width: 50px;
+	height: 50px;
+	color: white;
+	text-decoration: none;
+	margin-top: 10px;
+}
+
+.redBox {
+	background-color: red;
+	margin-bottom: 50px;
+}
+
+.orangeBox {
+	background-color: orange;
+	margin-left: 50px;
+}
+
+.yellowBox {
+	background-color: yellow;
+	margin-left: 50px;
+}
+
+.greenBox {
+	background-color: green;
+	vertical-align: top;
+}
+
+.blueBox {
+	background-color: blue;
+	margin-left: 50px;
+	vertical-align: top;
+}
+
+.purpleBox {
+	background-color: purple;
+	margin-left: 50px;
+	vertical-align: top;
+}
+
+img {
+	top: -80px;
+	right: -50px;
+	position: relative;
+	
+}
