@@ -2,30 +2,34 @@
 
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var color = colors[Math.floor(Math.random()*colors.length)];
+var write;
+var message;
 
 switch (color){
 	case 'red':
-		document.write("<p class='red'>Red is the color of blood.</p>");
-		console.log("Red is the color of blood.");
+		write = "<p class='red'>Red is the color of blood.</p>"
+		message = "Red is the color of blood."
 		break;
 	case 'orange':
-		document.write("<p class='orange'>Orange is the color of an orange.</p>");
-		console.log("Orange is the color of an orange.");
+		write = "<p class='orange'>Orange is the color of an orange.</p>"
+		message = "Orange is the color of an orange."
 		break;
 	case 'yellow':
-		document.write("<p class='yellow'>Yellow is the color of the sun.</p>");
-		console.log("Yellow is the color of the sun.");
+		write = "<p class='yellow'>Yellow is the color of the sun.</p>"
+		message = "Yellow is the color of the sun."
 		break;
 	case 'green':
-		document.write("<p class='green'>Green is the color of an apple.</p>");
-		console.log("Green is the color of an apple.");
+		write = "<p class='green'>Green is the color of an apple.</p>"
+		message = "Green is the color of an apple."
 		break;
 	case 'blue':
-		document.write("<p class='blue'>Blue is the color of the sky.</p>");
-		console.log("Blue is the color of the sky.");
+		write = "<p class='blue'>Blue is the color of the sky.</p>"
+		message = "Blue is the color of the sky."
 		break;
 	default: 
-		document.write("<p>I do not know anything by that color.</p>");
-		console.log("I do not know anything by that color.");
+		write = "<p>I do not know anything by that color.</p>"
+		message = "I do not know anything by that color."
 }
 
+document.write(write);
+console.log(message);
