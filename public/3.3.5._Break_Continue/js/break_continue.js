@@ -4,9 +4,9 @@
 	var random = 0;
 	var body = document.getElementsByTagName('body')[0];
 
-		while(random % 2 === 0){
-			random = Math.floor((Math.random()*50)+1);
-		}
+	while(random % 2 === 0){
+		random = Math.floor((Math.random()*50)+1);
+	}
 	console.log("Random odd number to skip is: " + random);
 	body.innerHTML +="<p> Random odd number to skip is: " + random + "</p>";
 
