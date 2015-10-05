@@ -30,7 +30,7 @@
 		}
 
 		console.log(random + ' was even. Generating a new random number.');
-	} while (random % 2 == 0);
+	} while (random % 2 === 0);
 
 	for(var i = 1; i <= 49; i += 2){
 		if(i == random){
