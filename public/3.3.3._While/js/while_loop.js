@@ -11,13 +11,20 @@
 
 	// }
 
+	// var i = 1;
+
+	// do{
+	// 	console.log(Math.pow(2, i));
+	// 	body.innerHTML += ("<p>" + Math.pow(2, i) + "</p>");
+	// 	i++;
+	// } while (i <= 16);
+
 	var i = 1;
 
-
-	do{
+	while(i <= 16) {
 		console.log(Math.pow(2, i));
 		body.innerHTML += ("<p>" + Math.pow(2, i) + "</p>");
 		i++;
-	} while (i <= 16);
+	}
 
 }());
