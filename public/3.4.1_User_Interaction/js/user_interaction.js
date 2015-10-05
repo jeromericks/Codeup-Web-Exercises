@@ -7,7 +7,7 @@
             userName = prompt('What\'s your name?');
         }
 
-    userName = userName[0].toUpperCase() + userName.substring(1,100);    
+    userName = userName[0].toUpperCase() + userName.substring(1, userName.length);    
 
     alert("Welcome " + userName + "!!!");
 
