@@ -17,4 +17,10 @@
 		body.innerHTML += (number % 2 == 1) ? "<p>" + random + " is an odd number! </p>" : "<p>" + random + " is an even number! </p>";
 	}
 	isOdd(random);
+
+	// function random(min, max) {
+	// 	return Math.floor((Math.random()* max - min) + min);
+	// }
+
+	// console.log(random(5, 20));
 }());
