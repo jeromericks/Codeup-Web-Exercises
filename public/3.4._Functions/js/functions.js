@@ -4,9 +4,9 @@
 	var myNameIs = 'Jerome';
 	var body = document.getElementsByTagName('body')[0];
 
-	function sayHello(name) {
-		console.log("Hello " + name);
-		body.innerHTML += "<p> Hello " + name + "</p>";
+	function sayHello(fname) {
+		console.log("Hello " + fname);
+		body.innerHTML += "<p> Hello " + fname + "</p>";
 	}
 	sayHello(myNameIs);
 

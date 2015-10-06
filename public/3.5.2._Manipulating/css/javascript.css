@@ -1,0 +1,11 @@
+p{
+	text-align: center;
+	font-size: 25px;
+}
+
+div{
+	text-align: center;
+	font-size: 25px;
+	padding-bottom: 50px;
+	border-bottom: 1px solid black;
+}
