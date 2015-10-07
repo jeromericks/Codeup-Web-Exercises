@@ -23,8 +23,8 @@
 		var area = 0.5 * base * height;
 		return area;
 	}
-	console.log(triangleArea(3, 4));
-	body.innerHTML += "<p>Area of Triangle: " + triangleArea(3, 4) + "</p>";
+	console.log(triangleArea(4, 4));
+	body.innerHTML += "<p>Area of Triangle: " + triangleArea(4, 4) + "</p>";
 
 
 	function trapezoidArea(base1, base2, height) {
@@ -41,7 +41,6 @@
 	}
 	console.log(circlePerimeter(5));
 	body.innerHTML += "<p>Perimeter of Circle: " + circlePerimeter(5) + "</p>";
-
 
 
 }());
