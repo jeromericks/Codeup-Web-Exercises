@@ -42,17 +42,17 @@
 				"lastName" : "Swift", 
 				"firstName" : "Jonathan"
 			}
-	}]
+	}];
 
 	console.log(books);
 
 	books.forEach(function (book, index, array) {
 		console.log("Book #" + (index + 1));
-		console.log("Title: " + book["title"]);
+		console.log("Title: " + book.title);
 		console.log("Author: " + book.author.lastName + ", " + book.author.firstName);
 		console.log("---");
 		body.innerHTML += "<p>Book #" + (index + 1) + "</p>";
-		body.innerHTML += "<p>Title: " + book["title"] + "</p>";
+		body.innerHTML += "<p>Title: " + book.title + "</p>";
 		body.innerHTML += "<p>Author: " + book.author.lastName + ", " + book.author.firstName + "</p>";
 		body.innerHTML += "<p>---</p>";
 	});
