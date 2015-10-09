@@ -9,7 +9,7 @@
 	    	return area;
 	    },
 	    logInfo: function (round) {
-	    	var area = circle.getArea(circle.radius);
+	    	var area = this.getArea(circle.radius);
 	    	if (round){
 	    		if(Math.abs(area - Math.floor(area)) >= 0.5) {
 	    			area = Math.ceil(area);
