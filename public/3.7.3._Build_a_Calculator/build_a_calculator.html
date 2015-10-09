@@ -2,7 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Build a Calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Build a Calculator</title>
     <link rel="shortcut icon" href="javascript.png">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
@@ -10,33 +12,33 @@
 </head>
 <body>
     <div>
-        <input type="text" class="text1" readonly>
-        <input type="text" class="text2" readonly>
-        <input type="text" class="text3" readonly>
+        <input type="text" id="text1" readonly>
+        <input type="text" id="text2" readonly>
+        <input type="text" id="text3" readonly>
     </div>
     <div>
         <button>1</button>
         <button>2</button>
         <button>3</button>
-        <button class="middle">+</button>
+        <button id="middle">+</button>
     </div>
     <div>
         <button>4</button>
         <button>5</button>
         <button>6</button>
-        <button class="middle">-</button>
+        <button id="middle">-</button>
     </div>
     <div>
         <button>7</button>
         <button>8</button>
         <button>9</button>
-        <button class="middle">*</button>
+        <button id="middle">*</button>
     </div>
     <div>
-        <button>C</button>
+        <button id="clear">C</button>
         <button>0</button>
         <button>=</button>
-        <button class="middle">/</button>
+        <button id="middle">/</button>
     </div>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="./js/build_a_calculator.js"></script>

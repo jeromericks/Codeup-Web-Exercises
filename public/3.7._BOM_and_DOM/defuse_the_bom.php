@@ -13,19 +13,8 @@
 
     <script>
         var detonationTimer = 5;
-        var count = 0;
-        var max = 10;
-        var interval = 1000;
-
-        var intervalId = setInterval(function () {
-            if (count >= max) {
-                clearInterval(intervalId);
-                defuseTheBOM();
-            } else {
-                count++;
-                updateTimer();
-            }
-        }, interval);
+        var intervalId = setInterval(updateTimer, 1000);
+       
 
         // TODO: This function needs to be called once every second
         function updateTimer()
