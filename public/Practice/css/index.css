@@ -1,0 +1,167 @@
+/* ------------------------------------------------------------
+Author: Jerome Ricks
+Date  : 10/3/15
+Notes : CSS of the Index Page of My Website.
+---------------------------------------------------------------*/
+
+/* === CSS RESET === */
+/** {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}*/
+/* === END RESET === */
+
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat-Bold'), url(http://fonts.gstatic.com/s/montserrat/v6/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    color: #262626;
+}
+
+p { font-size: 20px; }
+
+p.small { font-size: 16px; }
+
+a, a:hover, a:focus, a:active, a.active {
+    outline: 0;
+    color: #65c4ca;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+/*---Header---*/
+header {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+	background: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+/*---For Desktop---*/
+@media(min-width:768px) {
+    header .container {
+        padding-top: 200px;
+        padding-bottom: 100px;
+    }
+
+    header .intro-text .name {
+        font-size: 4.75em;
+    }
+
+    header .intro-text .skills {
+        font-size: 1.75em;
+    }
+    
+    .navbar-fixed-top {
+        padding: 25px 0;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-fixed-top.navbar-shrink {
+        padding: 10px 0;
+    }
+
+    .navbar-fixed-top.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+}
+
+/*---Navigation Bar---*/
+.navbar-default {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: transparent;
+}
+
+.navbar-default .navbar-brand, 
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+  color: #ffffff;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.navbar {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.navbar a:focus {
+    outline: 0;
+}
+
+.navbar .navbar-nav {
+    letter-spacing: 1px;
+}
+
+.navbar .navbar-nav li a:focus {
+    outline: 0;
+}
+
+.navbar-default,
+.navbar-inverse {
+    border: 0;
+}
+
+/*---Word Wraping---*/
+/*---Only Phones---*/
+@media (max-width: 767px) {
+  body {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+  }
+}
+
+.page-scroll{
+	text-transform: uppercase;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.page-scroll i {
+	padding-right: 5px;
+}

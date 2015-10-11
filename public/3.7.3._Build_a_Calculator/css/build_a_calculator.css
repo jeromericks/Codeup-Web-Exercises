@@ -22,13 +22,15 @@ button{
 	margin-right: 3px;
 }
 
-.text1, 
-.text3{
+#textOne, 
+#textThree{
 	width: 70px;
 	margin-right: 3px;
+	text-align: center;
 }
 
-.text2{
+#textTwo{
 	width: 50px;
 	margin-right: 3px;
+	text-align: center;
 }
