@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Google Maps API">
+        <title>Google Maps API</title>
+        <link rel="shortcut icon" href="javascript.png">
+        <link rel="stylesheet" href="./css/google_maps_api.css">
+    </head>
+    <body>
+        <div id="map"></div>
+        <script src="./js/google_maps_api.js"></script>
+        <script type="text/javascript">
+
+        var codeup;
+        function initMap() {
+            codeup = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 30.6357965, lng: -96.3191952},
+                zoom: 17
+            });
+            var marker = new google.maps.Marker({
+                position: codeup,
+                map: map
+            });
+        }
+
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb0ttOlTfxWFBvkLFiAh37EVNdwBA0xyM&callback=initMap">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+/* === CSS RESET === */
+/** {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}*/
+/* === END RESET === */
+
+html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 100%; }
