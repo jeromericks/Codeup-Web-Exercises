@@ -6,13 +6,9 @@
 }*/
 /* === END RESET === */
 
-html{
-	padding: 10px;
-	text-align: center;
-}
-
 div{
-	margin-top: 10px;
+	margin-top: 50px;
+	text-align: center;
 }
 
 button{
@@ -22,15 +18,112 @@ button{
 	margin-right: 3px;
 }
 
-#textOne, 
-#textThree{
-	width: 70px;
-	margin-right: 3px;
-	text-align: center;
+#first, #second, #third, #fourth{
+	margin-top: 10px;
+	margin-left: -83px;
 }
 
-#textTwo{
-	width: 50px;
-	margin-right: 3px;
+#text{
+	background:transparent;
+	border:none;
+	padding:1px 0 0 60px;
+	width:290px;
+	font-size:30px;
+	display: block;
 	text-align: center;
+}
+#textOne{
+	width:103px;
+	border:none;
+}
+#textTwo{
+	width:40px;
+	font-size:20px;
+	margin-top:8px;
+	border:none;
+}
+#textThree{
+	width:83px;
+	border:none;
+	margin-right: 4px;
+}
+#clear{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#seven{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#eight{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#nine{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#six{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#three{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#two{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#one{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#four{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#equals{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#zero{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#five{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#times{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#minus{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#plus{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
+}
+#divide{
+	height:6.3%;
+	width:13.2%;
+	border-radius:15px;
 }

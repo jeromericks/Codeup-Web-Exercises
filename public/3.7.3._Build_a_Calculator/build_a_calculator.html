@@ -1,46 +1,49 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Build a Calculator">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Build a Calculator</title>
+    <meta name="description" content="Build a Calculator">
+    <title>Build a Calulator</title>
     <link rel="shortcut icon" href="javascript.png">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./css/build_a_calculator.css">
 </head>
 <body>
-    <div>
-        <input type="text" id="textOne" readonly>
-        <input type="text" id="textTwo" readonly>
-        <input type="text" id="textThree" readonly>
-    </div>
-    <div>
-        <button id="one">1</button>
-        <button id="two">2</button>
-        <button id="three">3</button>
-        <button id="middle">+</button>
-    </div>
-    <div>
-        <button id="four">4</button>
-        <button id="five">5</button>
-        <button id="six">6</button>
-        <button id="middle">-</button>
-    </div>
-    <div>
-        <button id="seven">7</button>
-        <button id="eight">8</button>
-        <button id="nine">9</button>
-        <button id="middle">*</button>
-    </div>
-    <div>
-        <button id="clear">C</button>
-        <button id="zero">0</button>
-        <button id="equal">=</button>
-        <button id="middle">/</button>
-    </div>
+    <main class="container">
+        <div id="calulator_main" class="col-xs-4 col-md-offset-4">
+            <div id="text">
+                <input class="col-xs-5" type="text" id="textOne" readonly active value="0" ></input>
+                <input class="col-xs-2" type="text" id="textTwo" readonly></input>
+                <input class="col-xs-5" type="text" id="textThree" readonly value="0"></input>
+            </div>
+            <div id="first">
+            <button id="zero" class="btn btn-default" href="#">0</button>
+            <button id="one" class="btn btn-default" href="#">1</button>
+            <button id="two" class="btn btn-default" href="#">2</button>
+            <button id="three" class="btn btn-default" href="#">3</button>
+            </div>
+            <div id="second">
+            <button id="four" class="btn btn-default" href="#">4</button>
+            <button id="five" class="btn btn-default" href="#">5</button>
+            <button id="six" class="btn btn-default" href="#">6</button>
+            <button id="seven" class="btn btn-default" href="#">7</button>
+            </div>
+            <div id="third">
+            <button id="eight" class="btn btn-default" href="#">8</button>
+            <button id="nine" class="btn btn-default" href="#">9</button>
+            <button id="plus" class="btn btn-default" href="#">+</button>
+            <button id="minus" class="btn btn-default" href="#">-</button>
+            </div>
+            <div id="fourth">
+            <button id="times" class="btn btn-default" href="#">*</button>
+            <button id="divide" class="btn btn-default" href="#">/</button>
+            <button id="equals" class="btn btn-default" href="#">=</button>
+            <button id="clear" class="btn btn-default" href="#">C</button>
+            </div>
+        </div>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="./js/build_a_calculator.js"></script>
 </body>
-</html>
+<html>
