@@ -12,15 +12,24 @@
         <script src="./js/google_maps_api.js"></script>
         <script type="text/javascript">
 
-        var codeup;
+        var map;
         function initMap() {
-            codeup = new google.maps.Map(document.getElementById('map'), {
+            map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: 30.6357965, lng: -96.3191952},
                 zoom: 17
             });
+            var codeup = { lat: 30.6357965, lng: -96.3191952 };
             var marker = new google.maps.Marker({
                 position: codeup,
                 map: map
+            });
+            marker.addListener('click', function() {
+                var infowindow = new google.maps.InfoWindow({
+                    content: "Red Lobster"
+                });
+
+                // Open the window using our map and marker
+                infowindow.open(map, marker);
             });
         }
 
