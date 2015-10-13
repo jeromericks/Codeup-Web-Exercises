@@ -1,86 +1,9 @@
 /* === CSS RESET === */
-/** {
-  padding: 0;
-  border: 0;
+* {
   margin: 0;
-}*/
+  padding: 0;
+}
 /* === END RESET === */
-
-/*div{
-	text-align: center;
-}
-
-a{
-	font-size: 20px;
-	margin-right: 3px;
-}
-
-#text{
-	border:none;
-	padding: 1px 0px 0px 60px;
-	font-size:30px;
-	text-align: center;
-	margin-left: 15px;
-	margin-bottom: 50px;
-}
-
-#textOne, 
-#textThree{
-	width:100px;
-	border:none;
-}
-
-#textTwo{
-	width:70px;
-	font-size:30px;
-	border:none;
-	margin-left: -22px;
-	margin-right: 8px;
-}
-
-#first, 
-#second, 
-#third, 
-#fourth{
-	margin-top: 10px;
-}
-
-#zero, 
-#one, 
-#two, 
-#three, 
-#four, 
-#five, 
-#six, 
-#seven, 
-#eight, 
-#nine, 
-#plus, 
-#minus, 
-#times, 
-#divide, 
-#equals, 
-#clear{
-	height:5%;
-	width:13%;
-	border-radius:15px;
-}
-
-#minus:hover, #times:hover, #divide:hover, #plus:hover{
-	background-color: #eeeaea
-}
-
-#minus, #times, #divide, #plus{
-	background-color: #DFDDDD;
-}
-
-#clear{
-	background-color: #EA2B48;
-}
-
-#equals{
-	background-color: #0BC30B;
-}*/
 
 body{
 	margin: 25px;
@@ -97,7 +20,7 @@ button{
 	border: 1px solid #AFAFAF;
 	background-color: #d3d3d3;
 	box-shadow: 0px 4px #858484, 0px 10px 15px rgba(0, 0, 0, 0.2);
-	transition: all 0.2s ease;
+	transition: all 0.3s ease;
 	border-radius: 5px;
 }
 
