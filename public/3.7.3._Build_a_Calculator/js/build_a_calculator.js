@@ -188,6 +188,7 @@
 	var left = document.getElementById('left');
 	var operator = document.getElementById('operator');
 	var right = document.getElementById('right');
+	var clear = document.getElementsByClassName('operator')[3].getAttribute('data-value');
 
 	//add event listeners to the buttons
 
@@ -195,13 +196,19 @@
 		var clickedButton = this;
 		if(this.getAttribute('class') == 'number') {
 			clickedButton = this.getAttribute('data-value');
-			left = clickedButton;
-			console.log(left);
+			left.value = left.value + clickedButton;
+			if(this.getAttribute('class') !== 'number') {
+				if(this.getAttribute('class') == 'number') {
+					clickedButton = this.getAttribute('data-value');
+					right.value = right.value + clickedButton;
+				}
+			}
 		} 
 		else if(isNaN(this.clickedButton)) {
 			clickedButton = this.getAttribute('data-value');
-			operator = clickedButton;
-			console.log(operator);
+			if(this.clickedButton !== "C" || "="){
+				operator.setAttribute('value', clickedButton);
+			}
 		}
 		else if(this.clickedButton === "=") {
 			 calculateOutput();
@@ -217,7 +224,7 @@
 	}
 
 
-	function calcuateOutput() {
+	function calculateOutput() {
 		switch(operator){
 			case('*'):
 				answer = Number(left) * Number(right);
@@ -238,19 +245,14 @@
 	}
 
 	function Clear() {
-		left = left;
-		left.setAttribute('value','0');
-		operator.setAttribute('value','');
-		right.setAttribute('value','0');
-	}
-
-	function Operator () {
-		if (left == left) {
-			left = right;
+		var oper = operators.getAttribute('data-value');
+		if(oper == clear) {
+			left.value =  '';
+			operator.value = '';
+			right.value = '';
 		}
-			operators.getAttribute('data-value');
-
 	}
+
 
 }());
 
