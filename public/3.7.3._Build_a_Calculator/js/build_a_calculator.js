@@ -183,76 +183,80 @@
 
 
 	var answer;
+	var clear = document.getElementById('clear');
+	var equal = document.getElementById('equal');
+	var numbers = document.getElementsByClassName('number');
 	var buttons = document.getElementsByTagName('button');
 	var operators = document.getElementsByClassName('operator');
 	var left = document.getElementById('left');
 	var operator = document.getElementById('operator');
 	var right = document.getElementById('right');
-	var clear = document.getElementsByClassName('operator')[3].getAttribute('data-value');
+	
 
 	//add event listeners to the buttons
 
 	function listener(event) {
 		var clickedButton = this;
-		if(this.getAttribute('class') == 'number') {
+		this.getAttribute('class') == 'number'
+		if(operator.value == '') {
 			clickedButton = this.getAttribute('data-value');
 			left.value = left.value + clickedButton;
-			if(this.getAttribute('class') !== 'number') {
-				if(this.getAttribute('class') == 'number') {
-					clickedButton = this.getAttribute('data-value');
-					right.value = right.value + clickedButton;
-				}
-			}
-		} 
-		else if(isNaN(this.clickedButton)) {
+		}
+		else if(operator.value != '') {
 			clickedButton = this.getAttribute('data-value');
-			if(this.clickedButton !== "C" || "="){
-				operator.setAttribute('value', clickedButton);
-			}
+			right.value = right.value + clickedButton;
 		}
-		else if(this.clickedButton === "=") {
-			 calculateOutput();
-		}
-		else {
-			Clear();
-		}
-
 	}
 
-	for(var i = 0; i < buttons.length; i += 1) {
-		buttons[i].addEventListener('click', listener, false);
+	function operateListener(event) {
+		var clickedButton = this.getAttribute('data-value');
+		operator.value = clickedButton;
 	}
-
 
 	function calculateOutput() {
-		switch(operator){
+		switch(operator.value){
 			case('*'):
-				answer = Number(left) * Number(right);
-				left.setAttribute('value', answer);
+				answer = parseFloat(left.value) * parseFloat(right.value);
+				left.value = answer;
+				operator.value = '';
+				right.value = '';
 				break;
 			case('/'):
-				answer = Number(left) / Number(right);
-				left.setAttribute('value', answer);
+				answer = parseFloat(left.value) / parseFloat(right.value);
+				left.value = answer;
+				operator.value = '';
+				right.value = '';
 				break;
 			case('-'):
-				answer = Number(left) - Number(right);
-				left.setAttribute('value', answer);
+				answer = parseFloat(left.value) - parseFloat(right.value);
+				left.value = answer;
+				operator.value = '';
+				right.value = '';
 				break;
 			case('+'):
-				answer = Number(left) + Number(right);
-				left.setAttribute('value', answer);
+				answer = parseFloat(left.value) + parseFloat(right.value);
+				left.value = answer;
+				operator.value = '';
+				right.value = '';
 		}
 	}
 
 	function Clear() {
-		var oper = operators.getAttribute('data-value');
-		if(oper == clear) {
-			left.value =  '';
-			operator.value = '';
-			right.value = '';
-		}
+		left.value =  '';
+		operator.value = '';
+		right.value = '';
 	}
 
+	for(var i = 0; i < numbers.length; i += 1) {
+		numbers[i].addEventListener('click', listener, false);
+	}
+
+	for(var i = 0; i < operators.length; i += 1) {
+		operators[i].addEventListener('click', operateListener, false);
+	}
+
+	equal.addEventListener('click', calculateOutput, false);
+	clear.addEventListener('click', Clear, false);
 
 }());
 
