@@ -18,7 +18,10 @@
                 center: {lat: 30.6357965, lng: -96.3191952},
                 zoom: 17
             });
-            var codeup = { lat: 30.6357965, lng: -96.3191952 };
+            var codeup = { 
+                lat: 30.6357965, 
+                lng: -96.3191952 
+            };
             var marker = new google.maps.Marker({
                 position: codeup,
                 map: map
@@ -27,7 +30,7 @@
                 var infowindow = new google.maps.InfoWindow({
                     content: "Red Lobster"
                 });
-                
+
                 infowindow.open(map, marker);
             });
         }

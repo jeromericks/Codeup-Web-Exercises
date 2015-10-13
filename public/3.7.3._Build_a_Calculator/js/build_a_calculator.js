@@ -6,7 +6,6 @@
 	var clear = document.getElementById('clear');
 	var equal = document.getElementById('equal');
 	var numbers = document.getElementsByClassName('number');
-	var buttons = document.getElementsByTagName('button');
 	var operators = document.getElementsByClassName('operator');
 	var left = document.getElementById('left');
 	var operator = document.getElementById('operator');
@@ -20,11 +19,11 @@
 		this.getAttribute('class') == 'number'
 		if(operator.value == '') {
 			clickedButton = this.getAttribute('data-value');
-			left.value = left.value + clickedButton;
+			left.value += clickedButton;
 		}
-		else if(operator.value != '') {
+		else {
 			clickedButton = this.getAttribute('data-value');
-			right.value = right.value + clickedButton;
+			right.value += clickedButton;
 		}
 	}
 
@@ -34,7 +33,7 @@
 	}
 
 	function calculateOutput() {
-		switch(operator.value){
+		switch(operator.value) {
 			case('*'):
 				answer = parseFloat(left.value) * parseFloat(right.value);
 				left.value = answer;
@@ -67,11 +66,11 @@
 		right.value = '';
 	}
 
-	for(var i = 0; i < numbers.length; i += 1) {
+	for(var i = 0; i < numbers.length; i++) {
 		numbers[i].addEventListener('click', listener, false);
 	}
 
-	for(var i = 0; i < operators.length; i += 1) {
+	for(var i = 0; i < operators.length; i++) {
 		operators[i].addEventListener('click', operateListener, false);
 	}
 
