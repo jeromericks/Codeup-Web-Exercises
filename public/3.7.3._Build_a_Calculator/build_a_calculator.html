@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!-- <!DOCTYPE>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,36 +13,90 @@
 <body>
     <main class="container">
         <div id="calulator_main" class="col-xs-4 col-md-offset-4">
+            <h1>Calculator</h1>
             <div id="text">
                 <input class="col-xs-5" type="text" id="textOne" readonly active value="0" ></input>
                 <input class="col-xs-2" type="text" id="textTwo" readonly></input>
                 <input class="col-xs-5" type="text" id="textThree" readonly value="0"></input>
             </div>
             <div id="first">
-                <button id="zero" class="btn btn-default" href="#">0</button>
-                <button id="one" class="btn btn-default" href="#">1</button>
-                <button id="two" class="btn btn-default" href="#">2</button>
-                <button id="three" class="btn btn-default" href="#">3</button>
+                <a id="zero" class="btn btn-default" href="#">0</a>
+                <a id="one" class="btn btn-default" href="#">1</a>
+                <a id="two" class="btn btn-default" href="#">2</a>
+                <a id="three" class="btn btn-default" href="#">3</a>
             </div>
             <div id="second">
-                <button id="four" class="btn btn-default" href="#">4</button>
-                <button id="five" class="btn btn-default" href="#">5</button>
-                <button id="six" class="btn btn-default" href="#">6</button>
-                <button id="seven" class="btn btn-default" href="#">7</button>
+                <a id="four" class="btn btn-default" href="#">4</a>
+                <a id="five" class="btn btn-default" href="#">5</a>
+                <a id="six" class="btn btn-default" href="#">6</a>
+                <a id="seven" class="btn btn-default" href="#">7</a>
             </div>
             <div id="third">
-                <button id="eight" class="btn btn-default" href="#">8</button>
-                <button id="nine" class="btn btn-default" href="#">9</button>
-                <button id="plus" class="btn btn-default" href="#">+</button>
-                <button id="minus" class="btn btn-default" href="#">-</button>
+                <a id="eight" class="btn btn-default" href="#">8</a>
+                <a id="nine" class="btn btn-default" href="#">9</a>
+                <a id="plus" class="btn btn-default" href="#">+</a>
+                <a id="minus" class="btn btn-default" href="#">-</a>
             </div>
             <div id="fourth">
-                <button id="times" class="btn btn-default" href="#">*</button>
-                <button id="divide" class="btn btn-default" href="#">/</button>
-                <button id="equals" class="btn btn-default" href="#">=</button>
-                <button id="clear" class="btn btn-default" href="#">C</button>
+                <a id="times" class="btn btn-default" href="#">*</a>
+                <a id="divide" class="btn btn-default" href="#">/</a>
+                <a id="equals" class="btn btn-default" href="#">=</a>
+                <a id="clear" class="btn btn-default" href="#">C</a>
             </div>
         </div>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="./js/build_a_calculator.js"></script>
+</body>
+<html> -->
+
+
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Build a Calculator">
+    <title>Build a Calulator</title>
+    <link rel="shortcut icon" href="javascript.png">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/build_a_calculator.css">
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <div class="calculator">
+
+        <input id='left' readonly active value='0'>
+        <input id='operator' readonly>
+        <input id='right' readonly active value='0'>
+
+        <button class='number' data-value='7'>7</button>
+        <button class='number' data-value='8'>8</button>
+        <button class='number' data-value='9'>9</button>
+
+        <button class='operator' data-value='/'>/</button>
+
+        <button class='number' data-value='4'>4</button>
+        <button class='number' data-value='5'>5</button>
+        <button class='number' data-value='6'>6</button>
+
+        <button class='operator' data-value='*'>*</button>
+
+        <button class='number' data-value='1'>1</button>
+        <button class='number' data-value='2'>2</button>
+        <button class='number' data-value='3'>3</button>
+
+        <button class='operator' data-value='-'>-</button>
+
+        <button class='number' data-value='0'>0</button>
+
+        <button class='operator' data-value='C'>C</button>
+        <button class='operator' data-value='='>=</button>
+        <button class='operator' data-value='+'>+</button>
+
+    </div>
+
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="./js/build_a_calculator.js"></script>
 </body>

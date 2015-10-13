@@ -6,124 +6,93 @@
 }*/
 /* === END RESET === */
 
-div{
-	margin-top: 50px;
+/*div{
 	text-align: center;
 }
 
-button{
-	height: 35px;
-	width: 45px;
+a{
 	font-size: 20px;
 	margin-right: 3px;
 }
 
-#first, #second, #third, #fourth{
-	margin-top: 10px;
-	margin-left: -83px;
+#text{
+	border:none;
+	padding: 1px 0px 0px 60px;
+	font-size:30px;
+	text-align: center;
+	margin-left: 15px;
+	margin-bottom: 50px;
 }
 
-#text{
-	background:transparent;
-	border:none;
-	padding:1px 0 0 60px;
-	width:290px;
-	font-size:30px;
-	display: block;
-	text-align: center;
-}
-#textOne{
-	width:103px;
-	border:none;
-}
-#textTwo{
-	width:40px;
-	font-size:20px;
-	margin-top:8px;
-	border:none;
-}
+#textOne, 
 #textThree{
-	width:83px;
+	width:100px;
 	border:none;
-	margin-right: 4px;
 }
+
+#textTwo{
+	width:70px;
+	font-size:30px;
+	border:none;
+	margin-left: -22px;
+	margin-right: 8px;
+}
+
+#first, 
+#second, 
+#third, 
+#fourth{
+	margin-top: 10px;
+}
+
+#zero, 
+#one, 
+#two, 
+#three, 
+#four, 
+#five, 
+#six, 
+#seven, 
+#eight, 
+#nine, 
+#plus, 
+#minus, 
+#times, 
+#divide, 
+#equals, 
 #clear{
-	height:6.3%;
-	width:13.2%;
+	height:5%;
+	width:13%;
 	border-radius:15px;
 }
-#seven{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
+
+#minus:hover, #times:hover, #divide:hover, #plus:hover{
+	background-color: #eeeaea
 }
-#eight{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
+
+#minus, #times, #divide, #plus{
+	background-color: #DFDDDD;
 }
-#nine{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
+
+#clear{
+	background-color: #EA2B48;
 }
-#six{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
-}
-#three{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
-}
-#two{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
-}
-#one{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
-}
-#four{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
-}
+
 #equals{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
+	background-color: #0BC30B;
+}*/
+
+button{
+	width: 90px;
+	float: left;
+	margin: 7px;
+	height: 40px;
 }
-#zero{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
+
+.calculator{
+	width: 500px;
 }
-#five{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
-}
-#times{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
-}
-#minus{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
-}
-#plus{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
-}
-#divide{
-	height:6.3%;
-	width:13.2%;
-	border-radius:15px;
+
+input{
+	text-align: center;
 }
