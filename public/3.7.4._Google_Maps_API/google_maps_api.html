@@ -3,29 +3,125 @@
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Google Maps API">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <title>Google Maps API</title>
         <link rel="shortcut icon" href="javascript.png">
         <link rel="stylesheet" href="./css/google_maps_api.css">
     </head>
     <body>
         <div id="map"></div>
-        <script src="./js/google_maps_api.js"></script>
+        <div id="coords"></div>
         <script type="text/javascript">
 
         var map;
         function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 30.6357965, lng: -96.3191952},
-                zoom: 17
+            var usRoadMapType = new google.maps.StyledMapType([
+            {
+            featureType: 'road.highway',
+            elementType: 'geometry',
+            stylers: [
+                {hue: '#ff0022'},
+                {saturation: 60},
+                {lightness: -20}
+            ]
+        }, {
+            featureType: 'road.arterial',
+            elementType: 'all',
+            stylers: [
+                {hue: '#2200ff'},
+                {lightness: -40},
+                {visibility: 'simplified'},
+                {saturation: 30}
+            ]
+        }, {
+            featureType: 'road.local',
+            elementType: 'all',
+            stylers: [
+                {hue: '#f6ff00'},
+                {saturation: 50},
+                {gamma: 0.7},
+                {visibility: 'simplified'}
+            ]
+        }, {
+            featureType: 'water',
+            elementType: 'geometry',
+            stylers: [
+                {saturation: 40},
+                {lightness: 40}
+            ]
+        }, {
+            featureType: 'road.highway',
+            elementType: 'labels',
+            stylers: [
+                {visibility: 'on'},
+                {saturation: 98}
+            ]
+        }, {
+            featureType: 'administrative.locality',
+            elementType: 'labels',
+            stylers: [
+                {hue: '#0022ff'},
+                {saturation: 50},
+                {lightness: -10},
+                {gamma: 0.90}
+            ]
+        }, {
+            featureType: 'transit.line',
+            elementType: 'geometry',
+            stylers: [
+                {hue: '#ff0000'},
+                {visibility: 'on'},
+                {lightness: -70}
+            ]
+        }
+            ], {name: 'US Road Atlas'});
+
+            var customMapType = new google.maps.StyledMapType([
+            {
+                stylers: [
+                    {hue: '#0d0da1'},
+                    {visibility: 'simplified'},
+                    {gamma: 0.5},
+                    {weight: 0.5}
+                ]
+            },
+            {
+                elementType: 'labels',
+                stylers: [{visibility: 'off'}]
+            },
+            {
+                featureType: 'water',
+                stylers: [{color: '#0d0da1'}]
+            }
+            ], {
+                name: 'Blue Style'
             });
+
+            var customMapTypeId = 'custom_style';
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: {
+                    lat: 30.6357965, 
+                    lng: -96.3191952
+                },  
+                mapTypeControlOptions: {
+                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN, customMapTypeId, 'usroadatlas']
+                }
+            });
+
             var codeup = { 
                 lat: 30.6357965, 
                 lng: -96.3191952 
             };
+
             var marker = new google.maps.Marker({
                 position: codeup,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
                 map: map
             });
+            
             marker.addListener('click', function() {
                 var infowindow = new google.maps.InfoWindow({
                     content: "Red Lobster"
@@ -33,11 +129,35 @@
 
                 infowindow.open(map, marker);
             });
+
+            marker.addListener('click', toggleBounce);
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+
+            // Show the lat and lng under the mouse cursor.
+            var coordsDiv = document.getElementById('coords');
+            map.controls[google.maps.ControlPosition.TOP_CENTER].push(coordsDiv);
+            map.addListener('mousemove', function(event) {
+                coordsDiv.textContent =
+                'lat: ' + Math.round(event.latLng.lat()) + ', ' +
+                'lng: ' + Math.round(event.latLng.lng());
+            });
+
+       
+        map.mapTypes.set(customMapTypeId, customMapType);
+        map.mapTypes.set('usroadatlas', usRoadMapType);
+
+        map.setMapTypeId('usroadatlas');
         }
 
         </script>
         <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb0ttOlTfxWFBvkLFiAh37EVNdwBA0xyM&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb0ttOlTfxWFBvkLFiAh37EVNdwBA0xyM&signed_in=true&callback=initMap">
         </script>
     </body>
 </html>
