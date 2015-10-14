@@ -6,6 +6,7 @@
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <title>Google Maps API</title>
         <link rel="shortcut icon" href="javascript.png">
+        <link rel="stylesheet" href="/font-awesome-4.4.0/css/font-awesome.css">
         <link rel="stylesheet" href="./css/google_maps_api.css">
     </head>
     <body>
@@ -16,65 +17,65 @@
         var map;
         function initMap() {
             var usRoadMapType = new google.maps.StyledMapType([
-            {
-            featureType: 'road.highway',
-            elementType: 'geometry',
-            stylers: [
-                {hue: '#ff0022'},
-                {saturation: 60},
-                {lightness: -20}
-            ]
-        }, {
-            featureType: 'road.arterial',
-            elementType: 'all',
-            stylers: [
-                {hue: '#2200ff'},
-                {lightness: -40},
-                {visibility: 'simplified'},
-                {saturation: 30}
-            ]
-        }, {
-            featureType: 'road.local',
-            elementType: 'all',
-            stylers: [
-                {hue: '#f6ff00'},
-                {saturation: 50},
-                {gamma: 0.7},
-                {visibility: 'simplified'}
-            ]
-        }, {
-            featureType: 'water',
-            elementType: 'geometry',
-            stylers: [
-                {saturation: 40},
-                {lightness: 40}
-            ]
-        }, {
-            featureType: 'road.highway',
-            elementType: 'labels',
-            stylers: [
-                {visibility: 'on'},
-                {saturation: 98}
-            ]
-        }, {
-            featureType: 'administrative.locality',
-            elementType: 'labels',
-            stylers: [
-                {hue: '#0022ff'},
-                {saturation: 50},
-                {lightness: -10},
-                {gamma: 0.90}
-            ]
-        }, {
-            featureType: 'transit.line',
-            elementType: 'geometry',
-            stylers: [
-                {hue: '#ff0000'},
-                {visibility: 'on'},
-                {lightness: -70}
-            ]
-        }
-            ], {name: 'US Road Atlas'});
+                {
+                featureType: 'road.highway',
+                elementType: 'geometry',
+                stylers: [
+                    {hue: '#ff0022'},
+                    {saturation: 60},
+                    {lightness: -20}
+                ]
+            }, {
+                featureType: 'road.arterial',
+                elementType: 'all',
+                stylers: [
+                    {hue: '#2200ff'},
+                    {lightness: -40},
+                    {visibility: 'simplified'},
+                    {saturation: 30}
+                ]
+            }, {
+                featureType: 'road.local',
+                elementType: 'all',
+                stylers: [
+                    {hue: '#f6ff00'},
+                    {saturation: 50},
+                    {gamma: 0.7},
+                    {visibility: 'simplified'}
+                ]
+            }, {
+                featureType: 'water',
+                elementType: 'geometry',
+                stylers: [
+                    {saturation: 40},
+                    {lightness: 40}
+                ]
+            }, {
+                featureType: 'road.highway',
+                elementType: 'labels',
+                stylers: [
+                    {visibility: 'on'},
+                    {saturation: 98}
+                ]
+            }, {
+                featureType: 'administrative.locality',
+                elementType: 'labels',
+                stylers: [
+                    {hue: '#0022ff'},
+                    {saturation: 50},
+                    {lightness: -10},
+                    {gamma: 0.90}
+                ]
+            }, {
+                featureType: 'transit.line',
+                elementType: 'geometry',
+                stylers: [
+                    {hue: '#ff0000'},
+                    {visibility: 'on'},
+                    {lightness: -70}
+                ]
+            }
+                ], {name: 'US Road Atlas'});
 
             var customMapType = new google.maps.StyledMapType([
             {
@@ -102,8 +103,8 @@
             map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 17,
                 center: {
-                    lat: 30.6357965, 
-                    lng: -96.3191952
+                    lat: 29.4284595, 
+                    lng: -98.492433
                 },  
                 mapTypeControlOptions: {
                     mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN, customMapTypeId, 'usroadatlas']
@@ -111,8 +112,8 @@
             });
 
             var codeup = { 
-                lat: 30.6357965, 
-                lng: -96.3191952 
+                lat: 29.488647, 
+                lng: -98.572298 
             };
 
             var marker = new google.maps.Marker({
@@ -121,10 +122,30 @@
                 animation: google.maps.Animation.DROP,
                 map: map
             });
+
+            var contentString = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading">Red Lobster</h1>'+
+                '<h4 id="subHeading" class="subHeading">$$ <i class="fa fa-circle"></i> Seafood, American (Traditional)</h4>'+
+                '<h2 id="secondHeading class="secondHeading">Reviews</h2>' +
+                '<div id="bodyContent">'+
+                '<img src="review.jpg"><p class="stars"><i class="fa fa-2x fa-star"></i><i class="fa fa-2x fa-star"></i><i class="fa fa-2x fa-star"></i><i class="fa fa-2x fa-star"></i><i class="fa fa-2x fa-star-o"></i><span>8/5/2014</span></p>' +
+                '<ul><li><a href="#">Mister D.</a></li><li><b>San Antonio, TX</b></li>' +
+                '<p class="first">I ordered the Crab Linguini Alfredo Supreme with a Caesar ' +
+                'Supreme more than made up for that!  It had just the right  '+
+                'amount of seasoning, the crab legs were meaty and I know '+
+                'it looked as hell of good as it tasted when I heard the lady '+
+                'behind me ask what I had just ordered haha.  The Sunset '+
+                'Passion Colada was equally good - do yourself a favor and '+
+                'order one of these.  It\'s like a mental island getaway for '+
+                'your tonsils and mind:p.</p> '+
+                '</div>'+
+                '</div>';
             
             marker.addListener('click', function() {
                 var infowindow = new google.maps.InfoWindow({
-                    content: "Red Lobster"
+                    content: contentString
                 });
 
                 infowindow.open(map, marker);
