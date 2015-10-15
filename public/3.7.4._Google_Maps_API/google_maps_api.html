@@ -7,25 +7,14 @@
         <title>Google Maps API</title>
         <link rel="shortcut icon" href="javascript.png">
         <link rel="stylesheet" href="/font-awesome-4.4.0/css/font-awesome.css">
-        <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
-        <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
         <link rel="stylesheet" href="./css/google_maps_api.css">
     </head>
     <body>
         <div id="map"></div>
         <div id="coords"></div>
-        <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-zoomslider/v0.7.0/L.Control.Zoomslider.js'></script>
-        <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-zoomslider/v0.7.0/L.Control.Zoomslider.css' rel='stylesheet' />
         <script type="text/javascript">
 
-       
-       
-        L.mapbox.accessToken = 'pk.eyJ1IjoiamVyb21lcmlja3MiLCJhIjoiY2lmcnAweGM3MG1mdXM4bTZvZjR1ZGR3aiJ9.HNgA7o9uqoDfxMiXUY2mlQ';
 
-        L.control.zoomslider().addTo(map);
-        var map = L.mapbox.map('map', 'mapbox.streets', {
-            zoomControl: false
-        });
         function initMap() {
             var usRoadMapType = new google.maps.StyledMapType([
                 {
