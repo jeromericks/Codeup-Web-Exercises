@@ -1,18 +1,63 @@
 $(document).ready(function() {
 	"use strict";
 
+
 	var keys = {
-	        up: { code: 38, pressed: false, next: 'up2' },
-	        up2: { code: 38, pressed: false, next: 'down' },
-	        down: { code: 40, pressed: false, next: 'down2' },
-	        down2: { code: 40, pressed: false, next: 'left1' },
-	        left1: { code: 37, pressed: false, next: 'right1' },
-	        right1: { code: 39, pressed: false, next: 'left2' },
-	        left2: { code: 37, pressed: false, next: 'right2' },
-	        right2: { code: 39, pressed: false, next: 'b' },
-	        b: { code: 66, pressed: false, next: 'a' },
-	        a: { code: 65, pressed: false, next: 'enter' },
-	        enter: { code: 13, pressed: false, next: 'up' },
+	        up: { 
+	        	code: 38, 
+	        	pressed: false, 
+	        	next: 'up2' 
+	        },
+	        up2: { 
+	        	code: 38, 
+	        	pressed: false, 
+	        	next: 'down' 
+	        },
+	        down: { 
+	        	code: 40, 
+	        	pressed: false, 
+	        	next: 'down2' 
+	        },
+	        down2: { 
+	        	code: 40, 
+	        	pressed: false, 
+	        	next: 'left1' 
+	        },
+	        left1: { 
+	        	code: 37, 
+	        	pressed: false, 
+	        	next: 'right1' 
+	        },
+	        right1: { 
+	        	code: 39, 
+	        	pressed: false, 
+	        	next: 'left2'
+	        },
+	        left2: { 
+	        	code: 37, 
+	        	pressed: false, 
+	        	next: 'right2' 
+	        },
+	        right2: { 
+	        	code: 39, 
+	        	pressed: false, 
+	        	next: 'b' 
+	        },
+	        b: { 
+	        	code: 66, 
+	        	pressed: false, 
+	        	next: 'a' 
+	        },
+	        a: { 
+	        	code: 65, 
+	        	pressed: false, 
+	        	next: 'enter' 
+	        },
+	        enter: { 
+	        	code: 13, 
+	        	pressed: false, 
+	        	next: 'up' 
+	        },
 
 	    },
 	    nextKey = 'up';
