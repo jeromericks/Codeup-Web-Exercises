@@ -18,4 +18,12 @@ html, body { height: 100%; margin: 0; padding: 0; }
    	.first { margin-top: -32px; }
 .fa-circle { font-size: 5px; color: #999; margin-right: 5px; position: relative; bottom: 3px;}
    	  	h4 { margin-top: -20px; font-weight: normal; }
-   	  	.stars { padding-left: 125px;};
+   	.stars { padding-left: 125px;};
+   	
+/* Adjustments to account for mapbox.css box-sizing rules */
+.leaflet-control-zoomslider-knob { width:14px; height:6px; }
+.leaflet-container .leaflet-control-zoomslider-body {
+  -webkit-box-sizing:content-box;
+     -moz-box-sizing:content-box;
+          box-sizing:content-box;
+  }

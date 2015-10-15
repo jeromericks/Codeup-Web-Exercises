@@ -2,7 +2,14 @@
 	"use strict";
 	
 	$(document).ready(function() {
-		$('h1, p, li').css('background-color', 'yellow');
+		$('h1').click()
+			function() {
+				$(this).css('background-color', 'yellow');	
+			}
+			function() {
+				$(this).css('background-color', 'blue');
+			}
+		);
 	});
 
 }());
