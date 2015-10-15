@@ -62,6 +62,7 @@ $(document).ready(function() {
 	    },
 	    nextKey = 'up';
 
+
 	$(document).keyup(function(event){
 	   	if (event.keyCode === keys[nextKey].code) {
 	        keys[nextKey].pressed = true;
@@ -85,6 +86,7 @@ $(document).ready(function() {
 	        alert('You have added 30 lives!');
 	    } 
     });
+
 
 });
 
