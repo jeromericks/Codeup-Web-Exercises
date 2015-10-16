@@ -7,7 +7,7 @@ $(document).ready(function() {
 		$(this).parent().hide('invisible');
 	});
        
-   	 $('a').click(function(event) {
+   	$('a').click(function(event) {
         event.preventDefault();
         $('dd').toggle('invisible');
     });

@@ -20,7 +20,6 @@ $(document).ready(function() {
         $(this).off("click").on("click", fadeOut);
     }    
 
-
 });
 
 
