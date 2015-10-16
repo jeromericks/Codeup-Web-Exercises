@@ -2,6 +2,7 @@ $(document).ready(function() {
 	"use strict";
 
 
+	var body = document.getElementsByTagName('body')[0];
 	var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
 	var user = [];
 
@@ -15,7 +16,6 @@ $(document).ready(function() {
 		};
 	};
 
-	var body = document.getElementById("game");
 	body.addEventListener("keyup", listener, false);
 });
 
