@@ -3,10 +3,9 @@ $(document).ready(function() {
 
     $('ul li:first-child').css('font-weight', 'bold');
 
-    $('ul').on('click', 'li', function(event) {
-    	event.preventDefault();
-        $('li').parent().addClass('invisible');
-    });
+    $('li').click(function(event){
+		$(this).parent().toggleClass('invisible');
+	});
        
 
 });
