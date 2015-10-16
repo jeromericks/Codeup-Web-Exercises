@@ -9,7 +9,7 @@ $(document).ready(function() {
 		user.push(event.keyCode);
 		console.log(user);
 		if (konami.length == user.length) {
-			if ( konami.toString() == user.toString()) {
+			if (konami.toString() == user.toString()) {
 				alert("You have added 30 lives!");
 			};
 		};
