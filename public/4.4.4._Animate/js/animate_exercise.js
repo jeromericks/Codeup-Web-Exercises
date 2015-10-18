@@ -28,7 +28,7 @@ $(document).ready(function() {
             opacity: "+=1"
         }, 500);
     });
-    
+
     // TODO: "Animate All" should use an animation stack to:
     //      1) Move and scale the box simultaneously
     //      2) Hide the box
@@ -48,6 +48,7 @@ $(document).ready(function() {
         }, 1000);
 
     });
+    
 
 });
 
