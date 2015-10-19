@@ -27,11 +27,27 @@
 <script>
 (function() {
     // TODO: Create an ajax GET request for /data/inventory.json
-
+    $.ajax({
+        url: "./data/inventory.json",
+        type: "GET",
+        data: {
+            limit:  10,
+            offset: 20
+        }
+    });
     // TODO: Take the data from inventory.json and append it to the products table
+    $.ajax("./data/inventory.json").done(function(data) {
+        alert("Everything went great!");
+        console.log(data);
+    }).fail(function() {
+        alert("There was an error!");
+    }).always(function() {
+        alert("And we're finished!");
+    });
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+
 })();
 </script>
 

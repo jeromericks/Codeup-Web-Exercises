@@ -11,7 +11,7 @@ $(document).ready(function() {
     // TODO: "Scale It" should expand the box width by 50%
     $("#btn-scale").click(function() {
         $("#animate-box").animate({
-            width: "+=25%",
+            width: "+=17.4%",
         }, 500);
     });
 
@@ -48,7 +48,7 @@ $(document).ready(function() {
         }, 1000);
 
     });
-    
+
 
 });
 
