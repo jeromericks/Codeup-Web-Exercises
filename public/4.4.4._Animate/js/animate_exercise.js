@@ -36,7 +36,7 @@ $(document).ready(function() {
     $("#btn-all").click(function() {
         $("#animate-box").animate({
             left: "-=100px",
-            width: "+=25%"
+            width: "+=17.4%"
         }, 1000);
         $("#animate-box").animate({
             opacity: "0"
@@ -44,7 +44,7 @@ $(document).ready(function() {
         $("#animate-box").animate({
             opacity: "+=1",
             left: "+=100px",
-            width: "-=25%"
+            width: "-=17.4%"
         }, 1000);
 
     });
