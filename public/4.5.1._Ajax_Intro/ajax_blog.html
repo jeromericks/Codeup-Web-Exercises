@@ -25,8 +25,12 @@
                 data.forEach(function (element, index, array) {
                     rowHTML = "<h2>" + element.title + "</h2>";
                     rowHTML += "<p>Date: " + element.date + "</p>";
-                    rowHTML += "<p>Content: " + element.content + "</p>";
-                    rowHTML += "<p>Posts: " + element.posts + "</p>";
+                    if(element.content){
+	                    rowHTML += "<p>Content: " + element.content + "</p>";
+                    }
+                    if(element.posts){
+	                    rowHTML += "<p>Posts: " + element.posts + "</p>";
+                    }
                     rowHTML += "<p>Categories: " + element.categories.join(", ") + "</p>";
                     rowHTML += "<hr>";
                     $("#posts").append(rowHTML);
