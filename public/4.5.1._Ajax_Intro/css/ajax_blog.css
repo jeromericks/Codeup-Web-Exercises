@@ -1,0 +1,8 @@
+h2, p {
+	margin-left: 10px;
+}
+
+button {
+	left: 80%;
+	position: relative;
+}
