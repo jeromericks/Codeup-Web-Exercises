@@ -5,12 +5,14 @@
     <meta name="description" content="Ajax Intro">
     <title>Online Store</title>
     <link rel="shortcut icon" href="jquery.gif">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/ajax_store.css">
 </head>
 <body>
 
 <h1>My Tool Store</h1>
 
-<table id="products">
+<table id="products" class="table table-striped">
     <thead>
         <tr>
             <th>Title</th>
@@ -21,34 +23,39 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+<button class="col-md-2 btn btn-primary">Refresh</button>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
-(function() {
-    // TODO: Create an ajax GET request for /data/inventory.json
-    $.ajax({
-        url: "./data/inventory.json",
-        type: "GET",
-        data: {
-            limit:  10,
-            offset: 20
+    (function() {
+        "use strict";
+        // TODO: Create an ajax GET request for /data/inventory.json
+        function inventory() {
+            $.get("./data/inventory.json").done(function(data) {
+                console.log(data);
+                var rowHTML;
+                data.forEach(function (element, index, array) {
+                    rowHTML = "<tr>";
+                    rowHTML += "<td>" + element.title + "</td>";
+                    rowHTML += "<td>" + element.quantity + "</td>";
+                    rowHTML += "<td>" + element.price + "</td>";
+                    rowHTML += "<td>" + element.categories.join(", ") + "</td>";
+                    rowHTML += "</tr>";
+                    $("#insertProducts").append(rowHTML);
+                });
+            });
         }
-    });
-    // TODO: Take the data from inventory.json and append it to the products table
-    $.ajax("./data/inventory.json").done(function(data) {
-        alert("Everything went great!");
-        console.log(data);
-    }).fail(function() {
-        alert("There was an error!");
-    }).always(function() {
-        alert("And we're finished!");
-    });
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
+        inventory();
 
-})();
+        $("button").click(function() {
+            $("#insertProducts").html(" ");
+            inventory();
+        });
+        
+    
+    })();
+
 </script>
 
 </body>
