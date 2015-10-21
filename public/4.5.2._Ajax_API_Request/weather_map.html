@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Ajax API Request">
+    <meta name="description" content="Weather Map">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <title>Weather Map</title>
     <link rel="shortcut icon" href="jquery.gif">
@@ -22,15 +22,13 @@
 
 <div id="map"></div>
 
-<div class="latLong">
-    <h5>Latitude:</h5>
-    <input type="text" name="latitude">
-    <h5>Longitude:</h5>
-    <input type="text" name="longitude">
+<div class="latLongCity">
+    <input type="text" id="latLongCity" placeholder="Enter an address or latitude / longitude.">
     <button class="btn btn-danger">Submit</button>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb0ttOlTfxWFBvkLFiAh37EVNdwBA0xyM"></script>
 
 <script>
 (function() {
@@ -46,7 +44,8 @@
         }).done(function(data) {
             console.log(data);
             var dataHTML;
-            $("h4").html(data.city.name);      
+            var cityName = data.city.name;
+            $("h4").html(cityName);      
                 data.list.forEach(function (day, i) {
                     dataHTML = "<h3>" + day.temp.max + "&deg; / " + day.temp.min + "&deg;</h3>";
                     dataHTML += '<img src ="http://openweathermap.org/img/w/' + day.weather[0].icon + '.png">';
@@ -55,26 +54,50 @@
                     dataHTML += "<p><strong>Wind: </strong>" + day.speed + "</p>";
                     dataHTML += "<p><strong>Pressure: </strong>" + day.pressure + "</p>";
                     $(".day" + (i + 1)).html(dataHTML);
+                    initMap(lat, lon, cityName);
                 });
         }).fail(function(){
             alert("Failed to get current weather");
         });
     };
+    weather(29.423017, -98.48527);      
 
-    // $("button").submit(function(e) {
-    //     e.preventDefault();
-    //     var cityLat = lat.val;
-    //     var cityLon = lon.val;
-    //     weather(cityLat, cityLon);
-    // });
+    function initMap(latitude, longitude, cityName) {
+        var latLng = new google.maps.LatLng(latitude, longitude);
+        var mapOptions = {
+            zoom: 4,
+            center: latLng,
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var marker = new google.maps.Marker({
+            position: latLng,
+            map: map,
+            draggable: true,
+            title:"Drag me!",
+        });
+    }   
 
-    weather(29.423017, -98.48527);         
+    $("button").click(function(e) {
+        e.preventDefault();
+        var address = $("#latLongCity").val();
+        var geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode({ "address": address }, function(results, status) {
+            if(status == google.maps.GeocoderStatus.OK) {
+                var latitude = results[0].geometry.location.lat();
+                var longitude = results[0].geometry.location.lng();
+                weather(latitude, longitude);
+                initMap(latitude, longitude);
+            }
+            else {
+                alert("Try again!");
+            }
+        });
+    });
+
     
 })();
 
-</script>
-<script src="./js/google_map_api.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb0ttOlTfxWFBvkLFiAh37EVNdwBA0xyM&callback=initMap">
 </script>
 </body>
 </html>

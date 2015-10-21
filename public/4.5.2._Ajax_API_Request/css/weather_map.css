@@ -11,20 +11,16 @@ h3, h4 {
 	margin-left: 10%;
 }
 
-h5, input, button {
-	display: inline-block;
-}
-
 input {
 	height: 34px;
+	width: 350px;
 	border-radius: 4px;
 	border: 1px solid #9D9D9D;
-	margin: auto;
-	text-align: center;
 	margin-right: 0.75%;
 }
 
-#map, #weather {
+#map, 
+#weather {
 	width: 80%;
 	margin: auto;
 	border: 1px solid #9D9D9D;
@@ -50,12 +46,13 @@ input {
 }
 
 #map { 
-	height: 40%; 
+	height: 49%; 
 	margin-top: 0.75%;
 }
 
-.latLong {
+.latLongCity {
 	text-align: center;
+	margin: auto;
 	margin-top: 0.75%;
 }
 
