@@ -19,6 +19,13 @@ input {
 	margin-right: 0.75%;
 }
 
+form {
+	text-align: center;
+	margin: auto;
+	margin-top: 0.75%;
+	margin-bottom: 5%;
+}
+
 #map, 
 #weather {
 	width: 80%;
@@ -28,6 +35,10 @@ input {
 
 #weather {
 	background-color: #F2F2F2;
+}
+
+#weather h3 {
+	margin-left: 0;
 }
 
 .day1, 
@@ -50,12 +61,14 @@ input {
 	margin-top: 0.75%;
 }
 
-.latLongCity {
-	text-align: center;
-	margin: auto;
-	margin-top: 0.75%;
-}
-
 .btn {
 	margin-bottom: 2px;
+}
+
+p:first-child {
+	font-size: 24px;
+}
+
+p:nth-child(2) {
+	margin-top: -10px;
 }

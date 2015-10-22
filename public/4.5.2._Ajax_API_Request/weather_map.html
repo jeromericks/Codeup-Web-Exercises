@@ -10,103 +10,26 @@
     <link rel="stylesheet" href="./css/weather_map.css">
 </head>
 <body>
+    <h3>Weather Application</h3>
+    <h4></h4>
 
-<h3>Weather Application</h3>
-<h4></h4>
+    <div id="weather">
+        <div class="day1"></div>
+        <div class="day2"></div>
+        <div class="day3"></div>
+    </div>
 
-<div id="weather">
-    <div class="day1"></div>
-    <div class="day2"></div>
-    <div class="day3"></div>
-</div>
+    <div id="map"></div>
 
-<div id="map"></div>
+    <form>
+        <input type="text" id="latLongCity" placeholder="Enter an address or latitude / longitude.">
+        <button class="btn btn-danger">Submit</button>
+    </form>
 
-<div class="latLongCity">
-    <input type="text" id="latLongCity" placeholder="Enter an address or latitude / longitude.">
-    <button class="btn btn-danger">Submit</button>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb0ttOlTfxWFBvkLFiAh37EVNdwBA0xyM"></script>
-
-<script>
-(function() {
-    "use strict";
-
-    function weather(lat, lon) {
-        $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
-            APPID: "1158a497c1b0fd3a9c7b2c16c3754758",
-            lat: lat,
-            lon: lon,
-            units: "imperial",
-            cnt: 3
-        }).done(function(data) {
-            console.log(data);
-            var dataHTML;
-            var cityName = data.city.name;
-            $("h4").html(cityName);      
-                data.list.forEach(function (day, i) {
-                    dataHTML = "<h3>" + day.temp.max + "&deg; / " + day.temp.min + "&deg;</h3>";
-                    dataHTML += '<img src ="http://openweathermap.org/img/w/' + day.weather[0].icon + '.png">';
-                    dataHTML += "<p><strong>" + day.weather[0].main + ": </strong>" + day.weather[0].description[0].toUpperCase() + day.weather[0].description.substring(1, day.weather[0].description.length) + "</p>";
-                    dataHTML += "<p><strong>Humidity: </strong>" + day.humidity + "</p>";
-                    dataHTML += "<p><strong>Wind: </strong>" + day.speed + "</p>";
-                    dataHTML += "<p><strong>Pressure: </strong>" + day.pressure + "</p>";
-                    $(".day" + (i + 1)).html(dataHTML);
-                    initMap(lat, lon, cityName);
-                });
-        }).fail(function(){
-            alert("Failed to get current weather");
-        });
-    };
-    weather(29.423017, -98.48527);      
-
-    function initMap(latitude, longitude, cityName) {
-        var latLng = new google.maps.LatLng(latitude, longitude);
-        var mapOptions = {
-            zoom: 4,
-            center: latLng,
-        };
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-        var marker = new google.maps.Marker({
-            position: latLng,
-            map: map,
-            draggable: true,
-            title:"Drag me!",
-        });
-        google.maps.event.addListener(marker, 'dragend', function() {
-            var latLng = marker.getPosition();
-            var latitude = latLng.lat();
-            var longitude = latLng.lng();
-            weather(latitude, longitude);
-        });
-    }   
-
-    $("button").click(function(e) {
-        e.preventDefault();
-        var address = $("#latLongCity").val();
-        var geocoder = new google.maps.Geocoder();
-
-        geocoder.geocode({ "address": address }, function(results, status) {
-            if(status == google.maps.GeocoderStatus.OK) {
-                var latitude = results[0].geometry.location.lat();
-                var longitude = results[0].geometry.location.lng();
-                weather(latitude, longitude);
-                initMap(latitude, longitude);
-            }
-            else {
-                alert("Try again!");
-            }
-        });
-    });
-
-
-
-    
-})();
-
-</script>
+    <script src="/moment/moment.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb0ttOlTfxWFBvkLFiAh37EVNdwBA0xyM"></script>
+    <script src="./js/weather_map.js"></script>
 </body>
 </html>
 
