@@ -25,8 +25,8 @@
                     dataHTML += "<p><strong>Wind: </strong>" + day.speed + "</p>";
                     dataHTML += "<p><strong>Pressure: </strong>" + day.pressure + "</p>";
                     $(".day" + (i + 1)).html(dataHTML);
-                    initMap(lat, lon, cityName);
                 });
+                initMap(lat, lon, cityName);
         }).fail(function(){
             alert("Failed to get current weather");
         });
@@ -64,7 +64,6 @@
                 var latitude = results[0].geometry.location.lat();
                 var longitude = results[0].geometry.location.lng();
                 weather(latitude, longitude);
-                initMap(latitude, longitude);
             }
             else {
                 alert("Try again!");

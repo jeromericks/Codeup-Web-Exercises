@@ -79,6 +79,10 @@ header .intro-text .skills {
     font-weight: 300;
 }
 
+header .list-inline {
+    margin-left: 0;
+}
+
 /*---For Desktop---*/
 @media(min-width:768px) {
     header .container {
