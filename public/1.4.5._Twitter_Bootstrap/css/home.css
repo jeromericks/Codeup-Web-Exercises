@@ -317,6 +317,12 @@ header ul:first-child {
     bottom: 10px;
 }
 
+.download {
+    border-radius: 10%;
+    width: 12%;
+    height: 5%;
+}
+
 /*---Word Wraping---*/
 /*---Only Phones---*/
 @media (max-width: 767px) {

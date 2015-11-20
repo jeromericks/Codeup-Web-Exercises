@@ -2,7 +2,7 @@ $(document).ready(function() {
 	"use strict";
 
 	
-	$('.pause').click(function() {
+	$(document).on('click', '.pause', function() {
 		var $this = $(this);
 	    $('header').css('background', 'url(/1.4.5._Twitter_Bootstrap/background2.jpg) no-repeat center center');
 	    $('header').css('background-size', 'cover');
@@ -19,7 +19,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.play').click(function() {
+	$(document).on('click', '.play', function() {
 		var $this = $(this);
 		console.log($this);
 		$('header').css('background', 'url(/1.4.5._Twitter_Bootstrap/background.gif) no-repeat center center');
@@ -58,7 +58,7 @@ $(document).ready(function() {
 	    });
 	});
 
-	var words = ['Jerome Ricks', "Full-Stack Web Developer", "Hi", "Bye"],
+	var words = ['Jerome Ricks', "Full-Stack Web Developer", " Download"],
     	div = document.getElementById('name'),
     	character_counter = 0,
     	counter = 0;
@@ -84,7 +84,12 @@ $(document).ready(function() {
 		        div = document.getElementById('desc');
 		        character_counter = 0;
 		        counter ++;
-		    } 
+		    } else if(counter == 1) {
+        		div = document.getElementById('button');
+      			character_counter = 0;
+      			div.innerHTML = '<a class="btn btn-default btn-lg"><i class="fa fa-download"></i>' + words[counter + 1] + '</a>';
+      			clearInterval(nameInterval);    
+      		}
 	    }
 	}
 
