@@ -60,7 +60,7 @@ $(document).ready(function() {
 	    });
 	});
 
-	//Typing effect for title
+	// Typing effect for title
 	var words = ['Jerome Ricks'],
     	div = document.getElementById('name'),
     	character_counter = 0,
@@ -81,11 +81,11 @@ $(document).ready(function() {
 		}
 
 		character_counter++;
-
-		
+		clearInterval(nameInterval);
 	}
 
 	var nameInterval = setInterval(updateWords, 500);
+
 
 	// Highlight the top nav as scrolling occurs
 	$('body').scrollspy({
