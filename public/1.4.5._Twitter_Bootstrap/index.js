@@ -4,7 +4,8 @@ $(document).ready(function() {
 	
 	$(document).on('click', '.pause', function() {
 		var $this = $(this);
-	    $('header').css('background', 'url(/img/background2.jpg) no-repeat center center');
+
+	    $('header').css('background', 'url(/1.4.5._Twitter_Bootstrap/background2.jpg) no-repeat center center');
 	    $('header').css('background-size', 'cover');
 	    $('header').css('-webkit-background-size', 'cover');
 	    $('header').css('-moz-background-size', 'cover');
@@ -21,12 +22,13 @@ $(document).ready(function() {
 
 	$(document).on('click', '.play', function() {
 		var $this = $(this);
-		console.log($this);
-		$('header').css('background', 'url(/img/background.gif) no-repeat center center');
+
+		$('header').css('background', 'url(/1.4.5._Twitter_Bootstrap/background.gif) no-repeat center center');
 	    $('header').css('background-size', 'cover');
 	    $('header').css('-webkit-background-size', 'cover');
 	    $('header').css('-moz-background-size', 'cover');
 		$('header').css('-o-background-size', 'cover');
+
 		if($this.hasClass('play')) {
 			$this.removeClass('play').addClass('pause');
 		}
@@ -79,7 +81,16 @@ $(document).ready(function() {
 		}
 
 		character_counter++;
-		clearInterval(nameInterval);
+
+		if(character_counter == words[counter].length + 4){  
+		    if(counter == 0){
+		        character_counter = 0;
+		        counter ++;
+		    } else if(counter == 1) {
+      			character_counter = 0;
+      			clearInterval(nameInterval);    
+      		}
+	    }
 	}
 
 	var nameInterval = setInterval(updateWords, 500);
