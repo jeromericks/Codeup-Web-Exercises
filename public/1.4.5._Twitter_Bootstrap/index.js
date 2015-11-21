@@ -4,8 +4,7 @@ $(document).ready(function() {
 	
 	$(document).on('click', '.pause', function() {
 		var $this = $(this);
-
-	    $('header').css('background', 'url(/1.4.5._Twitter_Bootstrap/background2.jpg) no-repeat center center');
+	    $('header').css('background', 'url(/img/background2.jpg) no-repeat center center');
 	    $('header').css('background-size', 'cover');
 	    $('header').css('-webkit-background-size', 'cover');
 	    $('header').css('-moz-background-size', 'cover');
@@ -22,13 +21,12 @@ $(document).ready(function() {
 
 	$(document).on('click', '.play', function() {
 		var $this = $(this);
-
-		$('header').css('background', 'url(/1.4.5._Twitter_Bootstrap/background.gif) no-repeat center center');
+		console.log($this);
+		$('header').css('background', 'url(/img/background.gif) no-repeat center center');
 	    $('header').css('background-size', 'cover');
 	    $('header').css('-webkit-background-size', 'cover');
 	    $('header').css('-moz-background-size', 'cover');
 		$('header').css('-o-background-size', 'cover');
-
 		if($this.hasClass('play')) {
 			$this.removeClass('play').addClass('pause');
 		}
@@ -60,7 +58,7 @@ $(document).ready(function() {
 	    });
 	});
 
-	// Typing effect for title
+	//Typing effect for title
 	var words = ['Jerome Ricks'],
     	div = document.getElementById('name'),
     	character_counter = 0,
