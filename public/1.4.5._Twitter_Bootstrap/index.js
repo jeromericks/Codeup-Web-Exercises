@@ -4,7 +4,7 @@ $(document).ready(function() {
 	
 	$(document).on('click', '.pause', function() {
 		var $this = $(this);
-		
+
 	    $('header').css('background', 'url(/1.4.5._Twitter_Bootstrap/background2.jpg) no-repeat center center');
 	    $('header').css('background-size', 'cover');
 	    $('header').css('-webkit-background-size', 'cover');
@@ -60,7 +60,8 @@ $(document).ready(function() {
 	    });
 	});
 
-	var words = ['Jerome Ricks', "Full-Stack Web Developer", " Download"],
+	//Typing effect for title
+	var words = ['Jerome Ricks'],
     	div = document.getElementById('name'),
     	character_counter = 0,
     	counter = 0;
@@ -81,18 +82,7 @@ $(document).ready(function() {
 
 		character_counter++;
 
-		if(character_counter == words[counter].length + 4){  
-		    if(counter == 0){
-		        div = document.getElementById('desc');
-		        character_counter = 0;
-		        counter ++;
-		    } else if(counter == 1) {
-        		div = document.getElementById('button');
-      			character_counter = 0;
-      			div.innerHTML = '<a class="btn btn-default btn-lg"><i class="fa fa-download"></i>' + words[counter + 1] + '</a>';
-      			clearInterval(nameInterval);    
-      		}
-	    }
+		
 	}
 
 	var nameInterval = setInterval(updateWords, 300);
