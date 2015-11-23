@@ -243,7 +243,7 @@ button {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #47f10e;
-	color: #47f10e;
+	  color: #47f10e;
     background: #000000;
 }
 
@@ -458,6 +458,7 @@ footer small{
 	margin-top: -9px;
 }
 
+/*---X animation on mobile menu---*/
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #FFFFFF;
 }
