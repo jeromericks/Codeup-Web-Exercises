@@ -6,17 +6,11 @@
 
 body{
 	padding-top: 85px;
-	background-image: url("/1.4.5._Twitter_Bootstrap/crossword.png");
 }
 
 div{
 	margin: auto;
 }
-
-/*h1{
-	left: 114px;
-	position: relative;
-}*/
 
 h5, ul{
 	margin-left: 50px;
@@ -81,16 +75,5 @@ h6, .experience em{
 	float: right;
 	margin-bottom: 10px;
 }
-
-/*.me {
-	position: absolute;
-	left: 134px;
-	top: 106px;
-	width: 100px;
-	height: 100px;
-	border-radius: 15%;
-	background:gold;
-	box-shadow: 0px 0px 9px 4px gold;
-}*/
 
 
