@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	"use strict";
-	
+	// For science...
     $('ul li:first-child').css('font-weight', 'bold');
 
     $('li').click(function(event){
