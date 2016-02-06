@@ -337,6 +337,127 @@ header ul:first-child {
     height: 5%;
 }
 
+/* Portfolio Section */
+
+.search-box {
+    position: relative;
+    height: 60px;
+}
+
+.search-box label {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    color: #262626;
+}
+
+.search-box input {
+    position: absolute;
+    background: transparent;
+    padding-left: 30px;
+}
+
+input::-webkit-input-placeholder { color: #260303; }
+input:-moz-placeholder { color: #260303; } /* Firefox 18- */
+input::-moz-placeholder { color: #260303; } /* Firefox 19+ */
+input:-ms-input-placeholder { color: #260303; }
+
+.search-result-message {
+    margin: 0 0 20px;
+    padding: 0 15px;
+    color: #ff4444;
+    font-size: 1.5em;
+}
+
+#portfolio .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+
+/* NG-Animate */
+.portfolio-list div,
+.search-result div {
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.portfolio-item.ng-enter.ng-enter-active,
+.portfolio-item.ng-leave,
+.search-result-message.ng-enter.ng-enter-active,
+.search-result-message-item.ng-leave {
+    opacity: 0.7;
+}
+
+.portfolio-item.ng-leave.ng-leave-active,
+.portfolio-item.ng-enter,
+.search-result-message.ng-leave.ng-leave-active,
+.search-result-message.ng-enter {
+    opacity: 0;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption:hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content span {
+    font-size: 0.9em;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+    margin-top: 10px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+    margin: 0;
+}
+
+#portfolio * {
+    z-index: 2;
+}
+
+#portfolio img {
+    border-radius: 10px;
+}
+
+@media(min-width:767px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+
 /*---Word Wraping---*/
 /*---Only Phones---*/
 @media (max-width: 767px) {
